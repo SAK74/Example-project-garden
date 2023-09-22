@@ -4,33 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link href="dist/main.css" rel="stylesheet" /> -->
-    <!-- <base href="/assets/" /> -->
     <title>Project</title>
   </head>
   <body class="container">
     <header class="flex justify-between">
       <img src="assets/giarddesign-logo.svg" alt="logo" />
-      <nav class="flex text-custom-600 gap-4">
+      <nav class="flex text-custom-600 gap-4 items-center">
         <a href="#">Oferta</a>
         <a href="#">O firmie</a>
         <a href="#">Realizacja</a>
         <a href="#">Kontakt</a>
-        <img src="assets/search-icon.svg" alt="search" class="cursor-pointer" />
+        <div class="search-icon w-6 cursor-pointer"></div>
       </nav>
     </header>
     <main>
       <section id="intro" class="grid grid-cols-2">
-        <div class="bg-[#DCC1AB]">heroes</div>
-        <div class="bg-hero bg-no-repeat bg-cover aspect-square"></div>
+        <div class="bg-[#DCC1AB] flex justify-center items-center p-16">
+          <div class="text flex flex-col">
+            <h1>Nowoczesna aranżacja<br />Twojego ogrodu</h1>
+            <p class="mt-11 mb-[75px]">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usługz indywidualnym
+              podejściem do każdego projektu.
+            </p>
+            <div>
+              <button class="btn-base text-stone-100 bg-green-900">
+                Skontaktuj się z nami
+              </button>
+
+              <button
+                class="btn-base border-green-900 text-green-900 stroke-down"
+              >
+                Zobacz nasze realizacje
+              </button>
+              <button class="btn-base stroke">Test</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-hero bg-no-repeat bg-cover"></div>
       </section>
     </main>
-    <div class="dar">
-      <h1 class="dark:bg-hero">Test</h1>
+    <div class="">
+      <h1 class="">Test</h1>
       <h2 class="some-css">Test N2</h2>
       <h2>New element</h2>
     </div>
 
-    <script src="build/main.js"></script>
+    <script src="dist/main.js"></script>
   </body>
 </html>

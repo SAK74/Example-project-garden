@@ -20,8 +20,12 @@ const config = {
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        test: /\.(eot|ttf|woff|woff2|png|jpg|gif)$/i, //svg
         type: "asset/resource",
+      },
+      {
+        test: /\.(svg|html)/i,
+        loader: "html-loader",
       },
     ],
   },

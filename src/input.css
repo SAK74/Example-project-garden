@@ -2,8 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fonts/Montserrat-Regular.ttf");
+}
+
+@layer base {
+  h1 {
+    /* @apply text-4xl; */
+    font-size: 60px;
+    font-family: Montserrat;
+    font-weight: 500;
+    line-height: 70px;
+    word-wrap: break-word;
+  }
+  p {
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+  }
+}
+
 @layer components {
-  .some-css {
-    color: aqua;
+  .hover-btn {
+    @apply scale-105 duration-300;
+  }
+  .btn-base {
+    @apply rounded-full inline-flex px-6 pt-3 pb-3.5 gap-2 items-center font-['Inter'] shadow hover:ring-2 hover:hover:text-opacity-75;
+  }
+  .stroke-down {
+    @apply border-[1px];
+  }
+  .stroke {
+    @apply border-[1px];
   }
 }

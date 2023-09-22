@@ -1,4 +1,4 @@
-import "./some";
+import "./setLib";
 import "./input.css";
 
 console.log("Hello enviroument N1!");
