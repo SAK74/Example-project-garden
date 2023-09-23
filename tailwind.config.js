@@ -5,8 +5,15 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./index.html", "./src/**/*.{ts,js}"],
   theme: {
+    fontFamily: {
+      inter: ["Inter Variable"],
+    },
     extend: {
-      colors: { custom: colors.amber },
+      colors: {
+        // custom: colors.amber,
+        green: "#1B5B31",
+        ofer: "#F5F0EC",
+      },
       screens: {
         ...defaultTheme.screens,
         "3xs": "1600px",
