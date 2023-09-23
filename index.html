@@ -18,9 +18,12 @@
       </nav>
     </header>
     <main>
-      <section id="intro" class="grid grid-cols-2">
-        <div class="bg-[#DCC1AB] flex justify-center items-center p-16">
-          <div class="text flex flex-col">
+      <section
+        id="intro"
+        class="w-full h-auto bg-[#DCC1AB] justify-end items-center gap-16 inline-flex"
+      >
+        <div class="flex justify-center items-center p-16 aspect-square">
+          <div class="flex flex-col">
             <h1>Nowoczesna aranżacja<br />Twojego ogrodu</h1>
             <p class="mt-11 mb-[75px]">
               Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
@@ -41,8 +44,26 @@
             </div>
           </div>
         </div>
-        <div class="bg-hero bg-no-repeat bg-cover"></div>
+        <div
+          class="bg-hero bg-no-repeat bg-cover w-full self-stretch flex justify-end items-end"
+        >
+          <div class="flex bg-[#F5F0EC] gap-8 px-8 py-6">
+            <img
+              src="assets/custom-svg/arrow.svg"
+              width="25"
+              alt="left"
+              class="rotate-180 cursor-pointer"
+            />
+            <img
+              src="assets/custom-svg/arrow.svg"
+              width="25"
+              alt="right"
+              class="cursor-pointer"
+            />
+          </div>
+        </div>
       </section>
+      <section id="offer" class="bg-[#F5F0EC]"></section>
     </main>
     <div class="">
       <h1 class="">Test</h1>
