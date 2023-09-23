@@ -28,6 +28,8 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.0.8",
+    "@fontsource-variable/montserrat": "^5.0.9",
     "swiper": "^10.2.0"
   }
 }
