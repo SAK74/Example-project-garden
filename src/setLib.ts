@@ -10,6 +10,7 @@ for (let i = 0; i < strokeBtns.length; i += 1) {
   icon.innerHTML = arrow;
   icon.classList.add("w-4", "h-4");
   strokeBtns[i].appendChild(icon);
+  strokeBtns[i].classList.add("btn-base");
 }
 
 const strokeDownBtns = document.getElementsByClassName("stroke-down");
@@ -18,14 +19,16 @@ for (let i = 0; i < strokeDownBtns.length; i += 1) {
   icon.innerHTML = arrow;
   icon.classList.add("w-4", "h-4", "rotate-90");
   strokeDownBtns[i].appendChild(icon);
+  strokeDownBtns[i].classList.add("btn-base");
 }
 
 const lineBtns = document.getElementsByClassName("line");
 for (let i = 0; i < lineBtns.length; i += 1) {
+  // lineBtns[i].classList.add("line");
   const icon = document.createElement("span");
   icon.innerHTML = arrow;
   icon.classList.add("w-4", "h-4");
-  strokeBtns[i].appendChild(icon);
+  lineBtns[i].appendChild(icon);
 }
 
 const searchBtns = document.getElementsByClassName("search-icon");
