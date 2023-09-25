@@ -55,14 +55,14 @@
     @apply ring-2 text-opacity-75;
   }
   .btn-base {
-    @apply rounded-full inline-flex px-6 pt-3 pb-3.5 gap-2 items-center shadow hover:hover-btn active:active-btn;
+    @apply rounded-full inline-flex px-6 pt-3 pb-3.5 border-[1px] gap-2 items-center shadow hover:hover-btn active:active-btn;
   }
-  .stroke-down {
+  /* .stroke-down {
     @apply border-[1px];
   }
   .stroke {
     @apply border-[1px];
-  }
+  } */
   .line {
     @apply inline-flex gap-[10px] items-center border-b-[1px] rounded-sm hover:hover-btn active:active-btn;
   }

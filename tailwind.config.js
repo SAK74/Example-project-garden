@@ -20,6 +20,7 @@ module.exports = {
       },
       backgroundImage: {
         hero: 'url("../assets/Hero.png")',
+        about: 'url("../assets/About.png")'
       },
     },
     container: {
