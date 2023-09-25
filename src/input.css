@@ -57,12 +57,6 @@
   .btn-base {
     @apply rounded-full inline-flex px-6 pt-3 pb-3.5 border-[1px] gap-2 items-center shadow hover:hover-btn active:active-btn;
   }
-  /* .stroke-down {
-    @apply border-[1px];
-  }
-  .stroke {
-    @apply border-[1px];
-  } */
   .line {
     @apply inline-flex gap-[10px] items-center border-b-[1px] rounded-sm hover:hover-btn active:active-btn;
   }
@@ -74,5 +68,8 @@
   }
   .card-descr {
     @apply flex flex-col gap-3;
+  }
+  .small-text {
+    @apply text-xs leading-[18px];
   }
 }

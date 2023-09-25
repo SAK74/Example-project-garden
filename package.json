@@ -30,6 +30,7 @@
   "dependencies": {
     "@fontsource-variable/inter": "^5.0.8",
     "@fontsource-variable/montserrat": "^5.0.9",
+    "masonry-layout": "^4.2.2",
     "swiper": "^10.2.0"
   }
 }
