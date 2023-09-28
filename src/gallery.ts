@@ -28,7 +28,7 @@ urls.forEach((url, i) => {
   });
 
   image.classList.add("grid-item");
-  container.appendChild(image);
+  container.prepend(image);
 });
 
 // const pswipe = new PhotoSwipe({
