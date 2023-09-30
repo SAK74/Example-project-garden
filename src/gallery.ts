@@ -1,6 +1,5 @@
 import Masonry from "masonry-layout";
-// import PhotoSwipe from "photoswipe";
-// import "photoswipe/style.css";
+import { popup } from "./popup";
 
 const container = document.getElementById("gallery");
 if (!container) {
@@ -18,24 +17,48 @@ const urls = Array(9)
   .fill("")
   .map((el, i) => `assets/Photo-${8 - i}.png`);
 
-urls.forEach((url, i) => {
-  const image = new Image();
-  image.src = url;
-  image.addEventListener("load", function (ev) {
-    console.log(`this: ${i}`, this.height);
-    msnr.appended!([this]);
-    msnr.layout!();
+const addPhotos = () => {
+  urls.forEach((url, i) => {
+    const image = new Image();
+    image.src = url;
+    image.addEventListener("load", function (ev) {
+      msnr.appended!([this]);
+      msnr.layout!();
+    });
+
+    image.classList.add("grid-item");
+    container.appendChild(image);
   });
+};
 
-  image.classList.add("grid-item");
-  container.prepend(image);
-});
+addPhotos();
 
-// const pswipe = new PhotoSwipe({
-//   // appendToEl: container,
-//   gallery: container,
-//   pswpModule: () => import("photoswipe"),
-//   children: "a",
-//   // dataSource:
-// });
-// pswipe.init();
+const btn = document.getElementById("expand") as HTMLButtonElement;
+const changeBtn = (type: string) => {
+  btn.firstChild?.replaceWith(type);
+  btn.lastElementChild?.classList.toggle("rotate-90");
+  btn.lastElementChild?.classList.toggle("-rotate-90");
+};
+
+const expandEv = () => {
+  addPhotos();
+  changeBtn("Zwiń");
+  btn.onclick = collapseEv;
+};
+const collapseEv = () => {
+  const photos = document.getElementsByClassName("grid-item");
+  for (let i = photos.length - 1; i > 8; i -= 1) {
+    const lastPhoto = photos.item(i);
+    if (lastPhoto) {
+      container.removeChild(lastPhoto);
+      msnr.remove!([lastPhoto]);
+      msnr.layout!();
+    }
+  }
+  changeBtn("Rozwiń");
+  btn.onclick = expandEv;
+};
+
+btn.onclick = expandEv;
+
+popup();

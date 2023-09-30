@@ -55,10 +55,10 @@
     @apply ring-2 text-opacity-75;
   }
   .btn-base {
-    @apply rounded-full inline-flex px-6 pt-3 pb-3.5 border-[1px] gap-2 items-center shadow hover:hover-btn active:active-btn;
+    @apply rounded-full inline-flex px-6 pt-3 pb-3.5 border-[1px] gap-2 items-center shadow hover:hover-btn active:active-btn font-inter;
   }
   .line {
-    @apply inline-flex gap-[10px] items-center border-b-[1px] rounded-sm hover:hover-btn active:active-btn;
+    @apply inline-flex gap-[10px] items-center border-b-[1px] rounded-sm hover:hover-btn active:active-btn font-inter;
   }
   .card {
     @apply px-10 py-12 bg-white rounded-3xl flex-col justify-between items-start inline-flex;

@@ -8,11 +8,9 @@
     width: 3.5%;
   }
   .grid-item {
-    @apply mb-4 sizer;
+    @apply mb-4 sizer cursor-pointer;
   }
   .bg-linear {
-    /* @apply absolute bg-gradient-to-t from-orange-200 to-red-300; */
-    /* @apply absolute left-0 w-full h-full t-0; */
     position: absolute;
     top: 0;
     left: 0;
