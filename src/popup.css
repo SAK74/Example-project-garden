@@ -7,6 +7,9 @@
   #popup-close {
     @apply absolute top-0 right-0 -translate-x-full text-3xl;
   }
+  .swiper {
+    @apply h-full w-3/4;
+  }
   /* .popup-image {
     @apply;
   } */
