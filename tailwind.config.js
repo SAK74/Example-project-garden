@@ -10,7 +10,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        // custom: colors.amber,
         pink: "#DCC1AB",
         green: "#1B5B31",
         ofer: "#F5F0EC",
@@ -22,6 +21,9 @@ module.exports = {
       backgroundImage: {
         hero: 'url("../assets/Hero.png")',
         about: 'url("../assets/About.png")',
+      },
+      cursor: {
+        // cross: "url(../assets/custom-svg/cross.svg)",
       },
     },
     container: {

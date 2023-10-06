@@ -22,18 +22,7 @@
       rgba(214, 183, 158, 0) 100%
     );
   }
+  #gallery {
+    @apply cursor-pointer;
+  }
 }
-
-/* .grid-item {
-  width: 300px;
-  background: red;
-  margin-bottom: 5px;
-} */
-/* .grid-item @apply mb-4 */
-/* .fill {
-  height: 100px;
-} */
-
-/* #gallery {
-  background-color: aquamarine;
-} */

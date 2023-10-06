@@ -1,11 +1,14 @@
-import "./popup.css";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./popup.css";
+
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
+import cross from "../assets/custom-svg/cross.svg";
 
 const handleClose = (ev: Event) => {
-  // console.log("target: ", ev.target);
+  ev.stopPropagation();
   const bg = document.getElementById("popup");
   if (ev.target === ev.currentTarget) {
     bg?.classList.add("hidden");
@@ -15,58 +18,46 @@ const handleClose = (ev: Event) => {
   }
 };
 
-const bgClick: EventListener = (ev) => {
+const bgClick: EventListener = () => {
   const photos = document.getElementsByClassName(
     "grid-item"
   ) as HTMLCollectionOf<HTMLImageElement>;
 
   const background = document.getElementById("popup");
-  // console.log(background);
   if (!background) {
     throw new Error("Cannot find the popup");
   }
   background.classList.remove("hidden");
-  const close = document.getElementById("popup-close");
-
+  const closeBtn = document.getElementById("popup-close");
+  if (!closeBtn) {
+    throw new Error("Can't findclose button...");
+  }
+  closeBtn.innerHTML = cross;
+  closeBtn.firstChild!.addEventListener("click", handleClose, true);
   background.addEventListener("click", handleClose);
 
   const swiperWrapper = background.querySelector(".swiper-wrapper");
   for (let i = 0; i < photos.length; i += 1) {
-    const item = new Image();
-    item.src = photos[i].src;
+    const photo = new Image();
+    photo.src = photos[i].src;
+    const item = document.createElement("div");
     item.classList.add("swiper-slide");
-    console.log("load: ", item);
+    item.appendChild(photo);
     swiperWrapper?.appendChild(item);
   }
-  // const swiper = new Swiper(".swiper", {
-  //   modules: [Navigation],
-  //   navigation: {
-  //     nextEl: ".swiper-button-next",
-  //     prevEl: ".swiper-button-prev",
-  //   },
-  //   loop: true,
-
-  //   // autoplay: {
-  //   //   delay: 1000,
-  //   // },
-  //   centeredSlides: true,
-  // });
 };
 
 export const popup = () => {
-  const bg = document.getElementById("photo-bg");
+  const bg = document.getElementById("gallery");
   bg?.addEventListener("click", bgClick);
   const swiper = new Swiper(".swiper", {
-    modules: [Navigation],
+    modules: [Navigation, Pagination],
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    loop: true,
-    // autoHeight: true,
-    // autoplay: {
-    //   delay: 1000,
-    // },
-    // centeredSlides: true,
+    // loop: true,
+    grabCursor: true,
+    pagination: { el: ".swiper-pagination" },
   });
 };
