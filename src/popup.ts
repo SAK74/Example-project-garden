@@ -55,6 +55,6 @@ export const popup = () => {
     },
     // loop: true,
     grabCursor: true,
-    pagination: { el: ".swiper-pagination" },
+    pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },
   });
 };
