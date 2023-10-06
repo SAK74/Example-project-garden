@@ -1,8 +1,14 @@
 @tailwind components;
 
 @layer components {
+  .max-size {
+    @apply fixed top-0 left-0 bottom-0 right-0;
+  }
   .popup-bg {
-    @apply fixed top-0 left-0 bottom-0 right-0 z-10 bg-pink/70;
+    @apply max-size z-10;
+  }
+  #overlay {
+    @apply max-size bg-pink/70;
   }
   #popup-close {
     @apply absolute top-8 right-0 -translate-x-full w-8 h-8 cursor-pointer;

@@ -7,15 +7,12 @@ import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 import cross from "../assets/custom-svg/cross.svg";
 
-const handleClose = (ev: Event) => {
-  ev.stopPropagation();
+const handleClose = () => {
   const bg = document.getElementById("popup");
-  if (ev.target === ev.currentTarget) {
-    bg?.classList.add("hidden");
-    bg?.querySelectorAll(".swiper-slide").forEach((item) => {
-      item.remove();
-    });
-  }
+  bg?.classList.add("hidden");
+  bg?.querySelectorAll(".swiper-slide").forEach((item) => {
+    item.remove();
+  });
 };
 
 const bgClick: EventListener = () => {
@@ -33,8 +30,8 @@ const bgClick: EventListener = () => {
     throw new Error("Can't findclose button...");
   }
   closeBtn.innerHTML = cross;
-  closeBtn.firstChild!.addEventListener("click", handleClose, true);
-  background.addEventListener("click", handleClose);
+  closeBtn.addEventListener("click", handleClose);
+  document.getElementById("overlay")?.addEventListener("click", handleClose);
 
   const swiperWrapper = background.querySelector(".swiper-wrapper");
   for (let i = 0; i < photos.length; i += 1) {
@@ -48,7 +45,7 @@ const bgClick: EventListener = () => {
 };
 
 export const popup = () => {
-  const bg = document.getElementById("gallery");
+  const bg = document.getElementById("photo-bg");
   bg?.addEventListener("click", bgClick);
   const swiper = new Swiper(".swiper", {
     modules: [Navigation, Pagination],
