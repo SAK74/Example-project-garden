@@ -52,6 +52,9 @@
     line-height: 21px;
     word-wrap: break-word;
   }
+  :root {
+    @apply text-_black;
+  }
 }
 
 @layer components {

@@ -12,7 +12,9 @@ module.exports = {
       colors: {
         pink: "#DCC1AB",
         green: "#1B5B31",
-        ofer: "#F5F0EC",
+        // ofer: "#F5F0EC",
+        _black: "#111111",
+        _grey: "#f5f0ec",
       },
       screens: {
         ...defaultTheme.screens,

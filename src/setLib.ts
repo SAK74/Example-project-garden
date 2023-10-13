@@ -1,8 +1,6 @@
 import arrow from "../assets/custom-svg/arrow.svg";
 import searchIcon from "../assets/custom-svg/search.svg";
-
-// console.log("? message from imported file!");
-// console.log("TEST ICON HTML", downIcon);
+import svgLogo from "../assets/giarddesign-logo.svg";
 
 const strokeBtns = document.getElementsByClassName("stroke");
 for (let i = 0; i < strokeBtns.length; i += 1) {
@@ -38,4 +36,17 @@ for (let i = 0; i < searchBtns.length; i += 1) {
   fragment.append(icon);
   searchBtns[i].appendChild(fragment);
   icon.innerHTML = searchIcon;
+}
+
+const logos = document.getElementsByClassName("logo");
+for (let i = 0; i < logos.length; i += 1) {
+  logos[i].innerHTML = svgLogo;
+  if (logos[i].classList.contains("white")) {
+    const svgPath = logos[i].firstElementChild?.children;
+    if (svgPath?.length) {
+      for (let i = 0; i < svgPath.length; i += 1) {
+        svgPath[i].classList.add("fill-_grey");
+      }
+    }
+  }
 }
