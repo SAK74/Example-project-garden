@@ -82,4 +82,10 @@
   .small-text {
     @apply text-xs leading-[18px];
   }
+  .footer-wrapper {
+    @apply flex flex-col gap-[62px];
+  }
+  .link {
+    @apply hover:text-green;
+  }
 }

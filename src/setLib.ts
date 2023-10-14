@@ -1,6 +1,7 @@
 import arrow from "../assets/custom-svg/arrow.svg";
 import searchIcon from "../assets/custom-svg/search.svg";
 import svgLogo from "../assets/giarddesign-logo.svg";
+import respectLogo from "../assets/logo-ad-respect.svg";
 
 const strokeBtns = document.getElementsByClassName("stroke");
 for (let i = 0; i < strokeBtns.length; i += 1) {
@@ -35,7 +36,7 @@ for (let i = 0; i < searchBtns.length; i += 1) {
   const fragment = new DocumentFragment();
   fragment.append(icon);
   searchBtns[i].appendChild(fragment);
-  icon.innerHTML = searchIcon;
+  icon.outerHTML = searchIcon;
 }
 
 const logos = document.getElementsByClassName("logo");
@@ -50,3 +51,13 @@ for (let i = 0; i < logos.length; i += 1) {
     }
   }
 }
+
+const by = document.getElementById("ad-rescpect-logo");
+const resLogo = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+const byLink = document.createElement("a");
+byLink.appendChild(resLogo);
+resLogo.outerHTML = respectLogo;
+byLink.href = "https://adrespect.pl/";
+byLink.rel = "noopener noreferrer";
+byLink.target = "_blank";
+by?.appendChild(byLink);
