@@ -7,15 +7,31 @@
     <title>Project</title>
   </head>
   <body class="">
-    <header class="flex justify-between">
-      <div class="logo"></div>
-      <nav class="flex text-custom-600 gap-4 items-center">
-        <a href="#">Oferta</a>
-        <a href="#">O firmie</a>
-        <a href="#">Realizacja</a>
-        <a href="#">Kontakt</a>
-        <div class="search-icon w-6 cursor-pointer"></div>
-      </nav>
+    <header class="px-2 lg:px-20">
+      <div class="flex justify-between items-center">
+        <div class="logo"></div>
+        <nav class="flex gap-4 items-center">
+          <div
+            id="offer-menu"
+            class="cursor-pointer flex items-center gap-[5px] relative"
+          >
+            Oferta
+            <ul
+              class="absolute top-full bg-slate-100 bg-opacity-80 w-max scale-y-0 transition-transform origin-top rounded"
+              id="menu"
+            >
+              <li>Oferta N1</li>
+              <li>Oferta oferta oferta</li>
+              <li>pos1</li>
+              <li>pos1</li>
+            </ul>
+          </div>
+          <a href="#">O firmie</a>
+          <a href="#">Realizacja</a>
+          <a href="#">Kontakt</a>
+          <div class="search-icon w-6 cursor-pointer"></div>
+        </nav>
+      </div>
     </header>
     <main>
       <section

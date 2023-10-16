@@ -1,3 +1,4 @@
+import "./header";
 import arrow from "../assets/custom-svg/arrow.svg";
 import searchIcon from "../assets/custom-svg/search.svg";
 import svgLogo from "../assets/giarddesign-logo.svg";

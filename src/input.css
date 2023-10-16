@@ -88,4 +88,16 @@
   .link {
     @apply hover:text-green;
   }
+  header nav > *:not(.logo) {
+    @apply lg:py-6 py-2 font-inter font-normal text-sm leading-[21px] relative;
+  }
+  header nav > *:not(.logo)::after {
+    @apply absolute content-[''] bottom-0 left-0 w-full h-1 bg-green scale-x-0 transition-transform;
+  }
+  header nav > *:not(.logo):hover::after {
+    @apply scale-x-100;
+  }
+  #menu li {
+    @apply hover:bg-pink p-4;
+  }
 }
