@@ -11,6 +11,7 @@ const msnr = new Masonry(container, {
   gutter: ".gutter-sizer",
   columnWidth: ".sizer",
   percentPosition: true,
+  horizontalOrder: true,
 });
 
 const urls = Array(9)
