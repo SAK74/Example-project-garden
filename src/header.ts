@@ -14,3 +14,8 @@ menu?.addEventListener("mouseleave", function () {
   this.querySelector("#menu")?.classList.add("scale-y-0");
   this.lastElementChild?.classList.remove("rotate-180");
 });
+
+const searchBtn = document.getElementById("search-btn");
+searchBtn?.addEventListener("click", function () {
+  console.log(this);
+});

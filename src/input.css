@@ -89,7 +89,7 @@
     @apply hover:text-green;
   }
   header nav > *:not(.logo) {
-    @apply lg:py-6 py-2 font-inter font-normal text-sm leading-[21px] relative;
+    @apply lg:py-6 py-2 font-inter font-normal text-sm leading-6 relative;
   }
   header nav > *:not(.logo)::after {
     @apply absolute content-[''] bottom-0 left-0 w-full h-1 bg-green scale-x-0 transition-transform;
