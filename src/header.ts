@@ -15,7 +15,23 @@ menu?.addEventListener("mouseleave", function () {
   this.lastElementChild?.classList.remove("rotate-180");
 });
 
+const searchForm = document.forms.namedItem("search");
+
+if (!searchForm) {
+  throw new Error("The form is not defined!");
+}
+
+function onSubmit(form: HTMLFormElement) {
+  const val = (form.elements.namedItem("search") as RadioNodeList).value;
+  console.log(val);
+}
+
 const searchBtn = document.getElementById("search-btn");
 searchBtn?.addEventListener("click", function () {
-  console.log(this);
+  onSubmit(searchForm);
+});
+
+searchForm.addEventListener("submit", function (ev) {
+  ev.preventDefault();
+  onSubmit(this);
 });

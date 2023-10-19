@@ -29,21 +29,24 @@
           <a href="#">O firmie</a>
           <a href="#">Realizacja</a>
           <a href="#">Kontakt</a>
-          <label class="min-w-[24px] cursor-pointer">
-            <input
-              id="input"
-              type="text"
-              class="h-6 w-0 transition-all duration-1000 focus:w-40 focus:outline-0 mr-6"
-              placeholder="Szukaj..."
-            />
-            <img
-              src="assets/custom-svg/search.svg"
-              width="24"
-              alt="search-icon"
-              class="inline absolute right-0"
-              id="search-btn"
-            />
-          </label>
+          <form name="search">
+            <label class="cursor-pointer">
+              <input
+                id="input"
+                name="search"
+                type="text"
+                class="h-6 w-0 transition-all duration-1000 focus:w-40 focus:outline-0 mr-6"
+                placeholder="Szukaj na stronie"
+              />
+              <img
+                src="assets/custom-svg/search.svg"
+                width="24"
+                alt="search-icon"
+                class="inline absolute right-0"
+                id="search-btn"
+              />
+            </label>
+          </form>
         </nav>
       </div>
     </header>
