@@ -17,7 +17,7 @@
           >
             Oferta
             <ul
-              class="absolute top-full bg-slate-100 bg-opacity-80 w-max scale-y-0 transition-transform origin-top rounded"
+              class="absolute top-full bg-slate-100 bg-opacity-80 w-max scale-y-0 transition-transform origin-top rounded z-10"
               id="menu"
             >
               <li>Oferta N1</li>
@@ -51,44 +51,24 @@
       </div>
     </header>
     <main>
-      <section
-        id="intro"
-        class="w-full h-auto bg-pink justify-end items-center gap-16 inline-flex"
-      >
-        <div class="flex justify-center items-center p-16 aspect-square">
-          <div class="flex flex-col">
-            <h1>Nowoczesna aranżacja<br />Twojego ogrodu</h1>
-            <h6 class="mt-11 mb-[75px]">
-              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
-              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
-              podejściem do każdego projektu.
-            </h6>
-            <div>
-              <button class="btn-base text-stone-100 bg-green border-green">
-                Skontaktuj się z nami
-              </button>
-
-              <button class="border-green text-green stroke-down">
-                Zobacz nasze realizacje
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="bg-hero bg-no-repeat bg-cover w-full self-stretch flex justify-end items-end"
-        >
-          <div class="flex bg-_grey gap-8 px-8 py-6">
+      <section id="intro" class="w-full h-auto bg-pink">
+        <div class="swiper">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-pagination intro-pagination"></div>
+          <div
+            class="flex bg-_grey gap-8 px-8 py-6 absolute bottom-0 right-0 z-10"
+          >
             <img
               src="assets/custom-svg/arrow.svg"
               width="25"
               alt="left"
-              class="rotate-180 cursor-pointer"
+              class="rotate-180 cursor-pointer swiper-prev"
             />
             <img
               src="assets/custom-svg/arrow.svg"
               width="25"
               alt="right"
-              class="cursor-pointer"
+              class="cursor-pointer swiper-next"
             />
           </div>
         </div>
@@ -300,6 +280,36 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
+    <template id="intro-content">
+      <div class="justify-end items-center gap-16 inline-flex">
+        <div class="flex justify-center items-center p-16 aspect-square">
+          <div class="flex flex-col">
+            <h1>
+              Nowoczesna aranżacja
+              <div id="slide-name">Twojego ogrodu</div>
+            </h1>
+            <h6 class="mt-11 mb-[75px]">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+              podejściem do każdego projektu.
+            </h6>
+            <div>
+              <button class="btn-base text-stone-100 bg-green border-green">
+                Skontaktuj się z nami
+              </button>
+
+              <button class="border-green text-green stroke-down">
+                Zobacz nasze realizacje
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          id="hero-photo"
+          class="bg-no-repeat bg-cover w-full self-stretch flex justify-end items-end"
+        ></div>
+      </div>
+    </template>
     <script src="dist/main.js"></script>
   </body>
 </html>

@@ -13,16 +13,13 @@
   #popup-close {
     @apply absolute top-8 right-0 -translate-x-full w-8 h-8 cursor-pointer;
   }
-  .swiper {
+  #popup .swiper {
     @apply h-full w-3/4;
   }
-  .swiper-slide {
+  #popup .swiper-slide {
     @apply flex justify-center;
   }
-  .swiper-slide img {
+  #popup .swiper-slide img {
     @apply h-full;
   }
-  /* .popup-image {
-    @apply;
-  } */
 }

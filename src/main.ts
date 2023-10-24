@@ -1,3 +1,4 @@
+import "./intro";
 import "./setLib";
 import "./input.css";
 import "@fontsource-variable/montserrat";

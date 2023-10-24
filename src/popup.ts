@@ -47,7 +47,7 @@ const bgClick: EventListener = () => {
 export const popup = () => {
   const bg = document.getElementById("photo-bg");
   bg?.addEventListener("click", bgClick);
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper("#popup .swiper", {
     modules: [Navigation, Pagination],
     navigation: {
       nextEl: ".swiper-button-next",
