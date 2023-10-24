@@ -44,7 +44,6 @@ names.forEach((name) => {
 
 const swiper = new Swiper("#intro .swiper", {
   modules: [Navigation, Pagination],
-  grabCursor: true,
   containerModifierClass: "swipper-intro-",
   navigation: {
     nextEl: ".swiper-next",
@@ -54,4 +53,5 @@ const swiper = new Swiper("#intro .swiper", {
     el: ".swiper-pagination.intro-pagination",
   },
   loop: true,
+  speed: 1000,
 });
